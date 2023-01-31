@@ -31,12 +31,6 @@ export default function App() {
       </div>
       {isdatePick && <DatePicker closeHandle={() => setDatePick(false)} selectDateHandle={selectDateHandle}/>}
       {isdatePick2 && <DatePicker closeHandle={() => setDatePick2(false)} selectDateHandle={selectDateHandle2}/>}
-      {/* <button
-        className="p-4 border rounded-md"
-        onClick={() => setDatePick(!isdatePick)}
-      >
-        Date Pick
-      </button> */}
     </>
   )
 }

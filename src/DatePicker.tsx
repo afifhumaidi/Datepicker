@@ -26,8 +26,8 @@ export default function DatePicker(props: {
   }
 
   return (
-    <div className="date-picker w-[688px]">
-      <div className="header border">
+    <div className="date-picker w-[688px] rounded-lg border shadow-md">
+      <div className="header border-b">
         <div className="flex justify-between items-center p-4">
           Pilih Tanggal
           <span className="cursor-pointer" onClick={props.closeHandle}>
@@ -36,7 +36,7 @@ export default function DatePicker(props: {
         </div>
       </div>
       <div className="body flex">
-        <div className="dateBody flex-grow border">
+        <div className="dateBody flex-grow border-r">
           <DateSelector
             selectDateHandle={props.selectDateHandle}
             lastMothHandle={lastMothHandle}
@@ -44,7 +44,7 @@ export default function DatePicker(props: {
             startDate={date.todayMonth}
           />
         </div>
-        <div className="dateBody flex-grow border">
+        <div className="dateBody flex-grow border-l">
           <DateSelector
             selectDateHandle={props.selectDateHandle}
             nextMothHandle={nextMothHandle}
