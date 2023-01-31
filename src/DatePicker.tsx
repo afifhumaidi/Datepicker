@@ -116,13 +116,13 @@ function DateSelector(props: {
             style={{ gridColumn: `span ${offSet} / span ${offSet}` }}
             className={`${!parseInt(offSet) && 'hidden'}`}
           ></span>
-          {getDaysMonth(props.startDate).map((day, index) => (
+          {getDaysMonth(props.startDate).map((day) => (
             <span
               key={day}
               className="cursor-pointer"
               onClick={(e) =>
                 props.selectDateHandle(
-                  props.startDate.set('date', parseInt(e.target.innerText, 10))
+                  props.startDate.set('date', day)
                 )
               }
             >
